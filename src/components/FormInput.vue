@@ -26,10 +26,14 @@
         required
       ></v-select>
 
-      <v-slider
+      <v-text-field
         v-model="quantity"
+        :counter="10"
+        :rules="quantityRules"
         label="Quantity"
-      >
+        required
+      ></v-text-field>
+
       </v-slider>
 
       <v-text-field
@@ -57,12 +61,6 @@
         Reset Form
       </v-btn>
 
-      <v-btn
-        color="warning"
-        @click="resetValidation"
-      >
-        Reset Validation
-      </v-btn>
     </v-form>
   </v-container>
 </template>
@@ -116,6 +114,7 @@ export default {
       this.$refs.form.validate()
     },
     reset () {
+      if(!window.confirm('Are you sure?')) return
       this.$refs.form.reset()
     },
     resetValidation () {
