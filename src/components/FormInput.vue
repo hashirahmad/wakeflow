@@ -29,6 +29,7 @@
       <v-text-field
         v-model="quantity"
         :counter="10"
+        type="number"
         label="Quantity"
         required
       ></v-text-field>
