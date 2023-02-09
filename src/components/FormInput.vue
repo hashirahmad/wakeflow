@@ -29,12 +29,9 @@
       <v-text-field
         v-model="quantity"
         :counter="10"
-        :rules="quantityRules"
         label="Quantity"
         required
       ></v-text-field>
-
-      </v-slider>
 
       <v-text-field
         v-model="stampDetails"
